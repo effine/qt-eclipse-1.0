@@ -9,7 +9,7 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.wizard.IWizard;
 import org.eclipse.jface.wizard.Wizard;
 
-import com.wizards.pages.ProjectNameWizardPage;
+import c3itop.wizards.pages.ProjectNameWizardPage;
 
 public class QtProjectWizard extends Wizard implements IWizard {
 

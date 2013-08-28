@@ -3,7 +3,7 @@
  * @date 2013��8��13��  ����1:56:41
  */
 
-package com.wizards.pages;
+package c3itop.wizards.pages;
 
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.wizard.WizardPage;
