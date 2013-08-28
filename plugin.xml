@@ -27,7 +27,7 @@
          </menu>
          <action
                class="c3itop.qt.actions.QtConfigureAction"
-               icon="icons/recycle.jpg"
+               icon="$nl$/icons/recycle.jpg"
                id="c3itop.qt.configure_action"
                label="%configureAction"
                menubarPath="c3itop.qt.conf_menu/gmk1"
