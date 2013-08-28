@@ -10,17 +10,27 @@
             visible="true">
          <menu
                id="c3itop.qt.conf_menu"
-               label="%MainMenu.name">
+               label="%MainMenu.name"
+               path="additions">
             <separator
-                  name="conf_separator">
+                  name="spt2">
             </separator>
+            <separator
+                  name="spt1">
+            </separator>
+            <groupMarker
+                  name="gmk1">
+            </groupMarker>
+            <groupMarker
+                  name="gmk2">
+            </groupMarker>
          </menu>
          <action
                class="c3itop.qt.actions.QtConfigureAction"
                icon="icons/recycle.jpg"
                id="c3itop.qt.configure_action"
                label="%configureAction"
-               menubarPath="c3itop.qt.conf_menu/conf_separator"
+               menubarPath="c3itop.qt.conf_menu/gmk1"
                toolbarPath="conf_separator"
                tooltip="Configure">
          </action>
@@ -29,10 +39,18 @@
                icon="icons/recycle.jpg"
                id="c3itop.qt.nmake_action"
                label="%nmakeAction"
-               menubarPath="c3itop.qt.conf_menu/conf_separator"
+               menubarPath="c3itop.qt.conf_menu/gmk2"
                style="push"
                toolbarPath="conf_separator"
                tooltip="Nmake">
+         </action>
+         <action
+               icon="icons/recycle.jpg"
+               id="qt-eclipse-1.0.action1"
+               label="test"
+               menubarPath="c3itop.qt.conf_menu/gmk2"
+               toolbarPath="Normal/additions"
+               tooltip="测试tooltip">
          </action>
       </actionSet>
    </extension>
