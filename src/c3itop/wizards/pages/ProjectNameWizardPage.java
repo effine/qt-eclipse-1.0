@@ -18,15 +18,15 @@ public class ProjectNameWizardPage extends WizardPage {
 
 	private Text projectName;
 	private Text text;
-	private Text projectDirectory;
+	private Text projectDir;
 
 	private ISelection selection;
 
 	public ProjectNameWizardPage(ISelection selection) {
 		super("Wizardpage");
-		setTitle("Project");
-		setDescription("Create a new qt code project .");
 		this.selection = selection;
+		setTitle("Qt Code Project");
+		setDescription("Create a new Qt Code Application Project .");
 	}
 
 	@Override
@@ -36,38 +36,35 @@ public class ProjectNameWizardPage extends WizardPage {
 		setControl(container);
 
 		Label lblNewLabel = new Label(container, SWT.NONE);
-		lblNewLabel.setBounds(10, 10, 82, 24);
+		lblNewLabel.setBounds(10, 21, 82, 24);
 		lblNewLabel.setText("&Project name:");
 
 		projectName = new Text(container, SWT.BORDER);
-		projectName.setBounds(98, 10, 449, 23);
+		projectName.setBounds(98, 21, 354, 23);
 
-		Group grpLocation = new Group(container, SWT.NONE);
-		grpLocation.setText("Location");
-		grpLocation.setBounds(10, 47, 537, 132);
+		Label lblDirectory = new Label(container, SWT.NONE);
+		lblDirectory.setBounds(10, 89, 58, 20);
+		lblDirectory.setText("&Location:");
 
-		Button btn1 = new Button(grpLocation, SWT.RADIO);
-		btn1.setSelection(true);
-		btn1.setBounds(10, 26, 185, 17);
-		btn1.setText("Create project in &workspace");
+		projectDir = new Text(container, SWT.BORDER);
+		projectDir.setBounds(81, 86, 279, 23);
 
-		Button btn2 = new Button(grpLocation, SWT.RADIO);
-		btn2.setBounds(10, 49, 226, 17);
-		btn2.setText("Create project in e&xternal location");
-
-		Button btn3 = new Button(grpLocation, SWT.RADIO);
-		btn3.setBounds(10, 72, 394, 17);
-		btn3.setText("Create project in workspace with &content at external location ");
-
-		Label lblDirectory = new Label(grpLocation, SWT.NONE);
-		lblDirectory.setBounds(10, 95, 61, 17);
-		lblDirectory.setText("Directory:");
-
-		projectDirectory = new Text(grpLocation, SWT.BORDER);
-		projectDirectory.setBounds(77, 95, 364, 23);
-
-		Button btnBrowse = new Button(grpLocation, SWT.NONE);
-		btnBrowse.setBounds(447, 93, 80, 27);
+		Button btnBrowse = new Button(container, SWT.NONE);
+		btnBrowse.setBounds(366, 83, 86, 28);
 		btnBrowse.setText("B&rowse...");
+
+		Button btnCreateProjectIn = new Button(container, SWT.CHECK);
+		btnCreateProjectIn.setText("Create Project In Workspace");
+		btnCreateProjectIn.setBounds(10, 60, 201, 17);
+	}
+
+	/* 返回工程名 */
+	public String getProjectName() {
+		return projectName.getText();
+	}
+
+	/* 返回工程目录 */
+	public String getProjectDir() {
+		return projectDir.getText();
 	}
 }

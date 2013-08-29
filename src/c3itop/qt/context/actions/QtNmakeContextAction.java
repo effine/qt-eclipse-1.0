@@ -47,7 +47,7 @@ public class QtNmakeContextAction implements IObjectActionDelegate {
 		/* 临时Bat文件中的内容 */
 		String qtBatContext = "f: \n cd "
 				+ qtBatPath
-				+ "\n  call \"C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\vcvarsall.bat\" \n  nmake \n  goto :eof";
+				+ "\n  call \"C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\vcvarsall.bat\"  \n  nmake \n  goto :eof";
 
 		Runtime runtime = Runtime.getRuntime(); // 获得JVM的运行环境
 
@@ -67,6 +67,11 @@ public class QtNmakeContextAction implements IObjectActionDelegate {
 		File file = new FileHandle().createBatFile(qtBatName, qtBatContext);
 		try {
 			Process proc = runtime.exec(qtBatName);
+
+			/* 使用exec（）方法的参数设置在指定目录下运行 */
+			// Process proc = runtime.exec(qtBatName, null, new
+			// File("qtBatPath"));
+
 			InputStream ips = proc.getInputStream();
 			InputStreamReader ipsr = new InputStreamReader(ips);
 			BufferedReader br = new BufferedReader(ipsr);
