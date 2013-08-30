@@ -36,7 +36,7 @@
          </action>
          <action
                class="c3itop.qt.actions.QtNmakeAction"
-               icon="icons/recycle.jpg"
+               icon="$nl$/icons/recycle.jpg"
                id="c3itop.qt.nmake_action"
                label="%nmakeAction"
                menubarPath="c3itop.qt.conf_menu/gmk2"
@@ -62,13 +62,13 @@
             objectClass="org.eclipse.core.resources.IProject">
          <action
                class="c3itop.qt.context.actions.QtConfigureContextAction"
-               icon="icons/recycle.jpg"
+               icon="$nl$/icons/recycle.jpg"
                id="c3itop.qt.configureContextAction"
                label="%configureContextAction">
          </action>
          <action
                class="c3itop.qt.context.actions.QtNmakeContextAction"
-               icon="icons/recycle.jpg"
+               icon="$nl$/icons/recycle.jpg"
                id="c3itop.qt.nmakeContextAction"
                label="%nmakeContextAction">
          </action>
@@ -100,7 +100,7 @@
       <wizard
             category="c3itop.qt.qtcategory"
             class="c3itop.qt.wizards.QtProjectWizard"
-            icon="icons/recycle.jpg"
+            icon="$nl$/icons/recycle.jpg"
             id="qt-eclipse-1.0.wizard1"
             name="%qtprojectnmae"
             project="true">

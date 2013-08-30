@@ -14,21 +14,22 @@ import org.eclipse.swt.widgets.Text;
 
 public class ShowNameWizardPage extends WizardPage {
 
-	private ISelection selection;
 	private Text proName;
 	private Text cppName;
+	private ProjectNameWizardPage namePage;
 
 	public ShowNameWizardPage(ISelection selection) {
 		super("Wizardpage");
 		setTitle("Qt Code Project");
 		setDescription("show project default file names .");
-		this.selection = selection;
+
+		namePage = new ProjectNameWizardPage(selection);
 	}
 
 	@Override
 	public void createControl(Composite parent) {
-		Composite container = new Composite(parent, SWT.NONE);
 
+		Composite container = new Composite(parent, SWT.NONE);
 		setControl(container);
 
 		Label lblNewLabel = new Label(container, SWT.NONE);
@@ -40,9 +41,11 @@ public class ShowNameWizardPage extends WizardPage {
 		lblPro.setText("Pro Filename：");
 
 		proName = new Text(container, SWT.BORDER);
-		proName.setBounds(121, 62, 355, 23);
+		proName.setBounds(121, 62, 376, 23);
+		// proName.setText(namePage.getProjectName() + ".pro");
 
 		cppName = new Text(container, SWT.BORDER);
-		cppName.setBounds(121, 23, 355, 23);
+		cppName.setBounds(121, 23, 376, 27);
+		// cppName.setText(namePage.getProjectName() + ".cpp");
 	}
 }
