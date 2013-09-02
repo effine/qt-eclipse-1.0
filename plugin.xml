@@ -27,6 +27,7 @@
          </menu>
          <action
                class="c3itop.qt.context.actions.QtConfigureContextAction"
+               definitionId="c3itop.qt.definitionId.configure"
                icon="$nl$/icons/recycle.jpg"
                id="c3itop.qt.configure_action"
                label="%configureAction"
@@ -36,6 +37,7 @@
          </action>
          <action
                class="c3itop.qt.context.actions.QtNmakeContextAction"
+               definitionId="c3itop.qt.definitionId.nmake"
                icon="$nl$/icons/recycle.jpg"
                id="c3itop.qt.nmake_action"
                label="%nmakeAction"
@@ -44,14 +46,6 @@
                toolbarPath="conf_separator"
                tooltip="Nmake">
          </action>
-         <action
-               icon="icons/recycle.jpg"
-               id="qt-eclipse-1.0.action1"
-               label="test"
-               menubarPath="c3itop.qt.conf_menu/gmk2"
-               toolbarPath="Normal/additions"
-               tooltip="测试tooltip">
-         </action>
       </actionSet>
    </extension>
    <extension
@@ -59,15 +53,17 @@
       <objectContribution
             adaptable="true"
             id="c3itop.qt.conf_objectContribution"
-            objectClass="org.eclipse.core.resources.IProject">
+            objectClass="org.eclipse.core.runtime.IAdaptable">
          <action
                class="c3itop.qt.context.actions.QtConfigureContextAction"
+               definitionId="c3itop.qt.definitionId.configure"
                icon="$nl$/icons/recycle.jpg"
                id="c3itop.qt.configureContextAction"
                label="%configureContextAction">
          </action>
          <action
                class="c3itop.qt.context.actions.QtNmakeContextAction"
+               definitionId="c3itop.qt.definitionId.nmake"
                icon="$nl$/icons/recycle.jpg"
                id="c3itop.qt.nmakeContextAction"
                label="%nmakeContextAction">
