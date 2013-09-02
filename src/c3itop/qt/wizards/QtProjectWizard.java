@@ -5,7 +5,6 @@
 
 package c3itop.qt.wizards;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
