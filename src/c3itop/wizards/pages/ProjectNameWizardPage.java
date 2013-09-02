@@ -104,7 +104,7 @@ public class ProjectNameWizardPage extends WizardPage {
 
 	/* 返回界面填写的工程名 */
 	public String getProjectName() {
-		if (projectName.getText() != null)
+		if (null != projectName.getText())
 			return projectName.getText();
 		return "";
 	}

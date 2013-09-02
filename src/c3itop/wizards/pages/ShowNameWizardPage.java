@@ -8,6 +8,8 @@ package c3itop.wizards.pages;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.ModifyEvent;
+import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
@@ -42,10 +44,16 @@ public class ShowNameWizardPage extends WizardPage {
 
 		proName = new Text(container, SWT.BORDER);
 		proName.setBounds(121, 62, 376, 23);
-		// proName.setText(namePage.getProjectName() + ".pro");
+
+		proName.addModifyListener(new ModifyListener() {
+			@Override
+			public void modifyText(ModifyEvent e) {
+				proName.setText(namePage.getProjectName() + ".pro");
+			}
+		});
 
 		cppName = new Text(container, SWT.BORDER);
 		cppName.setBounds(121, 23, 376, 27);
-		// cppName.setText(namePage.getProjectName() + ".cpp");
+		cppName.setText(namePage.getProjectName() + ".cpp");
 	}
 }

@@ -26,7 +26,7 @@
             </groupMarker>
          </menu>
          <action
-               class="c3itop.qt.actions.QtConfigureAction"
+               class="c3itop.qt.context.actions.QtConfigureContextAction"
                icon="$nl$/icons/recycle.jpg"
                id="c3itop.qt.configure_action"
                label="%configureAction"
@@ -35,7 +35,7 @@
                tooltip="Configure">
          </action>
          <action
-               class="c3itop.qt.actions.QtNmakeAction"
+               class="c3itop.qt.context.actions.QtNmakeContextAction"
                icon="$nl$/icons/recycle.jpg"
                id="c3itop.qt.nmake_action"
                label="%nmakeAction"
