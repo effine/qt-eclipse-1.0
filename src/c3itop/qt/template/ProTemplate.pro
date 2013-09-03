@@ -1,1 +1,8 @@
-this is proTemplate file
+TEMPLATE = app
+TARGET =  
+
+CONFIG +=  
+QT +=  
+
+HEADERS += 
+SOURCES +=  

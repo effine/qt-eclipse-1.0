@@ -3,7 +3,7 @@
  * @date 2013��8��13��  ����1:56:41
  */
 
-package c3itop.wizards.pages;
+package c3itop.qt.wizards.pages;
 
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.viewers.ISelection;
@@ -19,7 +19,7 @@ import org.eclipse.swt.widgets.DirectoryDialog;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
-public class ProjectNameWizardPage extends WizardPage {
+public class ProjectNameWizardPageBackup extends WizardPage {
 
 	private Text projectName;
 	private Button isws;
@@ -32,7 +32,7 @@ public class ProjectNameWizardPage extends WizardPage {
 		return projectName.getText();
 	}
 
-	public ProjectNameWizardPage(ISelection selection) {
+	public ProjectNameWizardPageBackup(ISelection selection) {
 		super("Wizardpage");
 		setTitle("Qt Code Project");
 		setDescription("Create a new Qt Code Application Project .");
