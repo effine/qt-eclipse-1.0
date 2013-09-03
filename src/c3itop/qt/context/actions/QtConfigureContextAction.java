@@ -59,9 +59,9 @@ public class QtConfigureContextAction implements IObjectActionDelegate {
 		try {
 			Process proc = runtime.exec(conf);// 另起一个进程,执行命令
 			InputStream ips = proc.getInputStream(); // 获得一个输入流InputStream
-			InputStreamReader ipsr = new InputStreamReader(ips); // 获得一个输入流InputSteamReader
+			// 获得一个输入流InputSteamReader
+			InputStreamReader ipsr = new InputStreamReader(ips);
 			BufferedReader br = new BufferedReader(ipsr);
-
 			String line = null;
 			while ((line = br.readLine()) != null) {
 				ConsoleMessage.consoleInfo += "\n" + br.readLine();
@@ -72,15 +72,16 @@ public class QtConfigureContextAction implements IObjectActionDelegate {
 					ConsoleMessage.consoleInfo += "命令执行失败!";
 			}
 			consoleStream.println(ConsoleMessage.consoleInfo);
-			br.close();
-			ips.close();
+			/*
+			 * br.close(); ips.close();
+			 */
 			project.refreshLocal(IResource.DEPTH_INFINITE, null);
 
-		} catch (IOException e) {
-			e.printStackTrace();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} catch (CoreException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
